@@ -32,7 +32,7 @@ Chacun peut améliorer ce document : modifiez-le, et notez la modification dans 
 ## 2. Les comptes communs
 
 - **Metricool** : marque `le_chateau_interieur` (blogId `7801329`), fuseau `Europe/Paris`. Réseaux : Page Facebook « Le Château Intérieur », Instagram @le_chateau_interieur, chaîne YouTube « Uniliance ». Les identifiants sont à demander à Étienne ; ils ne sont **jamais** écrits dans ce dépôt.
-- **Quota** : l'offre gratuite permet 20 publications programmées par mois (une par réseau). Faire le compte avant de programmer, et prévenir Étienne à l'approche de la limite (il passera à l'offre payante).
+- **Offre** : Étienne est passé à l'offre payante de Metricool le 19 nov. 2026 ; la limite de 20 publications programmées par mois de l'offre gratuite ne s'applique plus.
 - **Une publication par jour** sur le fil commun, à midi de préférence. Avant de programmer, regarder le calendrier Metricool (`getScheduledPosts`) pour ne pas publier deux fois le même jour qu'un autre membre.
 
 ## 3. Ligne éditoriale
@@ -108,3 +108,4 @@ Publications prêtes et validées, pour un jour sans autre contenu. Elles sont d
 
 - 9 nov. 2026 : première version (Google Doc), à partir des publications des 2 au 7 novembre.
 - 13 nov. 2026 : la procédure passe dans ce README, avec les outils (`outils/`), le plan de fin, les polices et la réserve. Étienne, avec Claude.
+- 19 nov. 2026 : Metricool passe à l'offre payante (fin de la limite de 20 publications par mois). Martin, avec Claude.
