@@ -35,6 +35,16 @@ Chacun peut améliorer ce document : modifiez-le, et notez la modification dans 
 - **Offre** : Étienne est passé à l'offre payante de Metricool le 19 nov. 2026 ; la limite de 20 publications programmées par mois de l'offre gratuite ne s'applique plus.
 - **Une publication par jour** sur le fil commun, à midi de préférence. Exception : les extraits d'un live Prout Cosmique sortent à 3 par jour (12 h 30, 18 h 30, 21 h) pendant la semaine qui suit le live, sur Instagram, Facebook et YouTube. Avant de programmer, regarder le calendrier Metricool (`getScheduledPosts`) pour ne pas publier deux fois le même jour qu'un autre membre.
 
+## 2 bis. Le Monteur Uniliance (sous-titres mot par mot, couleurs de la Spirale)
+
+Pour une vidéo verticale où quelqu'un parle (1 à 10 minutes), `outils/monteur.py` fait en deux temps ce qui a servi pour Prout Cosmique 04 et Love Bagarre :
+
+1. `python3 outils/monteur.py transcrire video.mp4` : transcription mot par mot (faster-whisper `large-v3-turbo`, gratuit) dans `travail/mots.txt`.
+2. L'IA lit le texte et propose un `plan.json` (voir l'en-tête du script) : corrections des mots mal entendus, **styles** selon le ton (A = Coup de poing, Anton, pour les passages forts ; B = Gravure, Fraunces Black Italic, pour le doux et l'humour tendre ; C = Encre, Permanent Marker, pour la voix du mental ou l'absurde), **couleurs** de la Spirale Dynamique sur quelques mots choisis (beige, violet, rouge, bleu, orange, vert, jaune, turquoise ; une couleur = un niveau, jamais décorative). La personne valide ou corrige.
+3. `python3 outils/monteur.py monter video.mp4 plan.json final.mp4` : un mot à l'écran à la fois, calé sur la reprise de la voix (jamais en avance), son remis à -15 LUFS, fin Uniliance de 2,8 s (logo, « Abonne-toi », bruitages doux de `modeles/fin-uniliance/`). Moins de 100 Mo, prêt pour la branche `videos`.
+
+Besoins : `ffmpeg`, `pip install faster-whisper scipy pillow --break-system-packages`, domaines `huggingface.co` et `*.hf.co` autorisés.
+
 ## 3. Ligne éditoriale
 
 - **Chaque publication offre une clé du Château** : une chambre, une carte, un éclairage. La promotion (accompagnement, appli, replay d'atelier) vient en second.
@@ -110,3 +120,4 @@ Publications prêtes et validées, pour un jour sans autre contenu. Elles sont d
 - 13 nov. 2026 : la procédure passe dans ce README, avec les outils (`outils/`), le plan de fin, les polices et la réserve. Étienne, avec Claude.
 - 19 nov. 2026 : Metricool passe à l'offre payante (fin de la limite de 20 publications par mois). Martin, avec Claude.
 - 19 nov. 2026 : exception « 3 par jour » pour les extraits des lives Prout Cosmique ; les 24 extraits du live 04 sont dans `videos/2026/11/prout04-*` et programmés du 19 au 27 nov. Martin, avec Claude.
+- 19 nov. 2026 : ajout du Monteur Uniliance (`outils/monteur.py`, polices Anton / Fraunces Black Italic / Permanent Marker, `modeles/fin-uniliance/`). Martin, avec Claude.
