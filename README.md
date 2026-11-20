@@ -79,6 +79,7 @@ Besoins : `ffmpeg`, `pip install faster-whisper scipy pillow --break-system-pack
    - Facebook : `REEL`, `videoThumbnailUrl` = miniature ;
    - YouTube : `short`, `public`, `madeForKids: false`, **sans** miniature (la chaîne n'y a pas encore droit : la requête serait refusée).
    La première programmation renvoie des adresses `static.metricool.com` : les réutiliser pour les deux autres réseaux.
+   Juste après, **mettre à jour le calendrier du Cosmolab** (Agenda › Publications) : relire `getScheduledPosts` (marque 7801329, d'hier à +90 jours, liste complète) et l'envoyer à `public.cosmolab_publications_metricool(jsonb)` dans Supabase (projet `hoxaonguuzotaetucmku`). Une tâche Claude le refait chaque matin à 6 h 53 pour rattraper ce qui est programmé à la main.
 9. Au moment de la publication, chaque personne invitée **accepte la Collab** sur son Insta perso (ça ne s'automatise pas).
 
 ## 5. Image + texte (visuel citation)
@@ -121,3 +122,4 @@ Publications prêtes et validées, pour un jour sans autre contenu. Elles sont d
 - 19 nov. 2026 : Metricool passe à l'offre payante (fin de la limite de 20 publications par mois). Martin, avec Claude.
 - 19 nov. 2026 : exception « 3 par jour » pour les extraits des lives Prout Cosmique ; les 24 extraits du live 04 sont dans `videos/2026/11/prout04-*` et programmés du 19 au 27 nov. Martin, avec Claude.
 - 19 nov. 2026 : ajout du Monteur Uniliance (`outils/monteur.py`, polices Anton / Fraunces Black Italic / Permanent Marker, `modeles/fin-uniliance/`). Martin, avec Claude.
+- 20 nov. 2026 : calendrier des publications du Cosmolab synchronisé avec Metricool chaque matin, et après chaque programmation par Claude. Martin, avec Claude.
